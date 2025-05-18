@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rydiko : co-ride to same destination</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module">
+      // Using the same Firebase config as before
+      const firebaseConfig = {
+        apiKey: "AIzaSyAH8WUT2a64P4E7mwn_R9QE0KU2ntINQEw", // Replace if different project
+        authDomain: "ridebuddy-4fe19.firebaseapp.com", // Replace if different project
+        projectId: "ridebuddy-4fe19", // Replace if different project
+        storageBucket: "ridebuddy-4fe19.firebasestorage.app", // Replace if different project
+        messagingSenderId: "114491938692", // Replace if different project
+        appId: "1:114491938692:web:f7dbf17dce73f71ef3afd1", // Replace if different project
+        measurementId: "G-QPMSRGF8GQ" // Replace if different project
+      };
+      window.firebaseConfig = firebaseConfig; // Make accessible globally
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Light gray background */
+        }
+        /* Hide elements by default */
+        .hidden { display: none; }
+        /* Style for ride request list */
+        .ride-request-item {
+            border: 1px solid #e5e7eb; /* Gray-200 */
+            padding: 0.75rem; /* p-3 */
+            margin-bottom: 0.75rem; /* mb-3 */
+            border-radius: 0.375rem; /* rounded-md */
+            background-color: #ffffff; /* White */
+        }
+        /* Active Nav Link Style */
+        .nav-link.active {
+            font-weight: 600; /* Semibold */
+            color: #111827; /* Gray-900 */
+            border-bottom: 2px solid #111827;
+        }
+        /* Basic button styling */
+        .btn {
+            display: inline-block; /* Ensure buttons behave predictably */
+            padding: 0.6rem 1.5rem;
+            border-radius: 0.375rem; /* rounded-md */
+            font-weight: 600; /* semibold */
+            transition: background-color 0.2s ease, color 0.2s ease;
+            cursor: pointer;
+            text-align: center;
+            border: 1px solid transparent; /* Base border */
+        }
+        .btn-primary {
+            background-color: #111827; /* Gray-900 */
+            color: #ffffff; /* White */
+            border-color: #111827;
+        }
+        .btn-primary:hover {
+            background-color: #374151; /* Gray-700 */
+            border-color: #374151;
+        }
+        .btn-primary:disabled {
+            background-color: #9ca3af; /* Gray-400 */
+            border-color: #9ca3af;
+            cursor: not-allowed;
+        }
+        .btn-secondary {
+            background-color: #ffffff; /* White */
+            color: #111827; /* Gray-900 */
+            border-color: #d1d5db; /* Gray-300 */
+        }
+        .btn-secondary:hover {
+            background-color: #f9fafb; /* Gray-50 */
+        }
+         .btn-success {
+            background-color: #16a34a; /* Green-600 */
+            color: #ffffff;
+            border-color: #16a34a;
+        }
+        .btn-success:hover {
+            background-color: #15803d; /* Green-700 */
+            border-color: #15803d;
+        }
+        /* Input styling */
+        .input-field {
+            width: 100%;
+            padding: 0.6rem 0.75rem;
+            border: 1px solid #d1d5db; /* Gray-300 */
+            border-radius: 0.375rem; /* rounded-md */
+            background-color: #ffffff;
+        }
+        .input-field:focus {
+            outline: none;
+            border-color: #3b82f6; /* Blue-500 */
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+        }
+        .input-field.readonly {
+             background-color: #f9fafb; /* Gray-50 */
+             cursor: not-allowed;
+        }
+        /* Added simple icon style */
+        .feature-icon {
+            background-color: #111827; /* Gray-900 */
+            color: #ffffff; /* White */
+            width: 4rem;           /* Increased size */
+            height: 4rem;          /* Increased size */
+            padding: 0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 0.75rem auto; /* Center horizontally, more bottom margin */
+            font-size: 2rem;      /* Larger icon */
+            box-shadow: 0 2px 8px 0 rgba(0,0,0,0.06);
+        }
+    </style>
+</head>
+
+</html>
