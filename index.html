@@ -122,5 +122,810 @@
         }
     </style>
 </head>
+<body class="bg-white text-gray-900 min-h-screen flex flex-col">
+    <header class="bg-white shadow-sm sticky top-0 z-10">
+        <nav class="container mx-auto max-w-4xl px-4 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2 text-2xl font-bold text-gray-900 nav-link" data-page="home">
+                <!-- -->
+                <span class="hidden sm:inline font-extrabold tracking-tight" style="font-family: 'Inter', 'Segoe UI', Arial, sans-serif; letter-spacing: -0.03em;">
+                    <span class="text-gray-900">Rydiko</span>
+                </span>
+            </a>
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-gray-700 focus:outline-none" aria-label="Open Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div id="main-nav" class="space-y-2 md:space-y-0 md:space-x-6 md:flex md:items-center absolute md:static left-0 right-0 top-full bg-white md:bg-transparent shadow md:shadow-none px-4 md:px-0 py-4 md:py-0 hidden md:flex z-20">
+                <a href="#" class="block text-gray-600 hover:text-gray-900 nav-link pb-1" data-page="home">Home</a>
+                <a href="#" class="block text-gray-600 hover:text-gray-900 nav-link pb-1" data-page="about">About</a>
+                <a href="#" class="block text-gray-600 hover:text-gray-900 nav-link pb-1" data-page="services">Services</a>
+                <a href="#" class="block text-gray-600 hover:text-gray-900 nav-link pb-1" data-page="request">Request Ride</a>
+                <a href="#" class="block text-gray-600 hover:text-gray-900 nav-link pb-1" data-page="contact">Contact</a>
+            </div>
+        </nav>
+    </header>
 
+    <main class="container mx-auto max-w-4xl px-2 sm:px-4 py-6 sm:py-8 md:py-12 flex-1 flex flex-col justify-center w-full">
+        <section id="page-home" class="page-section space-y-8 sm:space-y-12">
+            <div class="text-center bg-gray-100 rounded-lg shadow overflow-hidden">
+                <!-- Banner Image Start -->
+                <img 
+                    src="https://cdn.pixabay.com/photo/2022/07/23/15/20/car-ride-7340114_1280.png" 
+                    alt="Rydiko Banner" 
+                    class="w-full h-32 sm:h-48 md:h-56 object-cover rounded-t-lg shadow"
+                    style="object-position: center;"
+                />
+                <!-- Banner Image End -->
+                <div class="p-4 sm:p-8 md:p-10">
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Welcome to Rydiko</h1>
+                    <p class="text-base sm:text-lg text-gray-700 mb-6">
+                        Rydiko connects riders and drivers in seconds. Enjoy transparent pricing, real-time notifications, and a direct, hassle-free experience. Whether you need a ride or want to earn by driving, Rydiko is your go-to platform for simple, reliable transportation.
+                    </p>
+                    <button class="btn btn-primary nav-link w-full sm:w-auto" data-page="request">Request a Ride Now</button>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <h2 class="text-2xl sm:text-3xl font-bold mb-6">How It Works</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+                    <div class="bg-white p-4 sm:p-6 rounded-lg shadow flex flex-col items-center">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-user-edit"></i>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-semibold mb-2">1. Enter Details</h3>
+                        <p class="text-gray-600 text-sm sm:text-base">Provide your phone number, pickup location, and destination.</p>
+                    </div>
+                    <div class="bg-white p-4 sm:p-6 rounded-lg shadow flex flex-col items-center">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-paper-plane"></i>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-semibold mb-2">2. Send Request</h3>
+                        <p class="text-gray-600 text-sm sm:text-base">Confirm your request. Nearby drivers using Rydiko are notified instantly.</p>
+                    </div>
+                    <div class="bg-white p-4 sm:p-6 rounded-lg shadow flex flex-col items-center">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-semibold mb-2">3. Connect</h3>
+                        <p class="text-gray-600 text-sm sm:text-base">Once a driver accepts, you'll see their contact info and a direct route link.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center bg-gray-800 text-white p-6 sm:p-10 rounded-lg shadow">
+                <h2 class="text-2xl sm:text-3xl font-bold mb-6">Why Rydiko?</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+                    <div>
+                        <h4 class="text-lg sm:text-xl font-semibold mb-2">Simple Pricing</h4>
+                        <p class="text-gray-300 text-sm sm:text-base">$1/mile, $5 minimum. No hidden fees. Know your cost upfront.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-lg sm:text-xl font-semibold mb-2">Direct Connection</h4>
+                        <p class="text-gray-300 text-sm sm:text-base">Get a direct Google Maps link and contact info for your driver or rider.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-lg sm:text-xl font-semibold mb-2">Real-Time</h4>
+                        <p class="text-gray-300 text-sm sm:text-base">Drivers see ride requests instantly and can accept with one tap.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="page-about" class="page-section hidden">
+            <h2 class="text-3xl font-bold mb-6 text-center">About Rydiko</h2>
+            <div class="bg-white p-8 rounded-lg shadow space-y-4 text-gray-700">
+                <p>
+                    Rydiko was founded with a mission to make ride-sharing simple, transparent, and accessible for everyone. We believe in direct connections between riders and drivers, without complicated apps or hidden fees.
+                </p>
+                <p>
+                    Our platform is designed for speed and ease of use. Riders can request a ride in seconds, and drivers are notified instantly. With Rydiko, you always know your price and can contact your driver or rider directly.
+                </p>
+                <p>
+                    Whether you need a quick trip across town or want to earn extra income as a driver, Rydiko is here to help you get there.
+                </p>
+                <ul class="list-disc list-inside space-y-2">
+                    <li>Founded in Dallas, serving the local community and beyond.</li>
+                    <li>Transparent pricing: $1 per mile, $5 minimum.</li>
+                    <li>No hidden fees, no complicated tracking—just rides, made simple.</li>
+                </ul>
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between mt-8 gap-4">
+                    <div class="space-y-2 text-center md:text-left">
+                        <div>
+                            <strong>Email:</strong>
+                            <a href="mailto:contact@rydiko.com" class="text-blue-600 hover:underline font-medium">contact@rydiko.com</a>
+                        </div>
+                        <div>
+                            <strong>Phone:</strong>
+                            <a href="tel:+19726389825" class="text-blue-600 hover:underline font-medium">+1 972-638-9825</a>
+                        </div>
+                        <div>
+                            <strong>Website:</strong>
+                            <a href="https://rydiko.com" target="_blank" class="text-blue-600 hover:underline font-medium">rydiko.com</a>
+                        </div>
+                    </div>
+                    <div class="flex space-x-4 justify-center md:justify-end">
+                        <a href="https://facebook.com/rydiko" target="_blank" aria-label="Facebook"
+                           class="social-footer-icon hover:bg-blue-600">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com/rydiko" target="_blank" aria-label="Instagram"
+                           class="social-footer-icon hover:bg-pink-600">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com/rydiko" target="_blank" aria-label="Twitter"
+                           class="social-footer-icon hover:bg-blue-400">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/rydiko" target="_blank" aria-label="LinkedIn"
+                           class="social-footer-icon hover:bg-blue-800">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="page-services" class="page-section hidden">
+            <h2 class="text-3xl font-bold mb-6 text-center">Our Services</h2>
+            <div class="bg-white p-8 rounded-lg shadow space-y-4 text-gray-700">
+                <p>
+                    Rydiko offers a streamlined ride connection service for both riders and drivers:
+                </p>
+                <ul class="list-disc list-inside space-y-2">
+                    <li>Easy ride requests for riders—just enter your details and go.</li>
+                    <li>Instant notifications for drivers—accept rides with a single tap.</li>
+                    <li>Direct Google Maps route links for seamless navigation.</li>
+                    <li>Transparent, upfront pricing: $1/mile, $5 minimum.</li>
+                    <li>Contact info shared upon acceptance for easy coordination.</li>
+                    <li>Real-time updates and notifications for both parties.</li>
+                </ul>
+                <p>
+                    Rydiko is perfect for anyone who values simplicity, speed, and transparency in their ride experience.
+                </p>
+            </div>
+        </section>
+
+        <section id="page-request" class="page-section hidden">
+            <div class="bg-white p-6 md:p-8 rounded-lg shadow">
+                <h2 class="text-3xl font-bold mb-6 text-center">Request or Drive</h2>
+
+                <div id="role-selection-section" class="p-4 border rounded-lg bg-gray-50 text-center mb-6">
+                    <h3 class="text-xl font-semibold mb-4">Choose Your Role</h3>
+                    <div class="flex flex-col md:flex-row justify-center items-center gap-4">
+                        <button id="selectRiderBtn" class="btn btn-secondary flex flex-col items-center px-8 py-4 hover:bg-blue-50 transition flex-1 min-w-[180px]">
+                            <span class="mb-2 text-3xl text-blue-600">
+                                <i class="fas fa-user"></i>
+                            </span>
+                            <span class="font-semibold text-base">I'm a Rider</span>
+                            <span class="text-xs text-gray-500 mt-1">Request a ride</span>
+                        </button>
+                        <span class="mx-2 text-gray-400 font-bold hidden md:inline">or</span>
+                        <button id="selectDriverBtn" class="btn btn-secondary flex flex-col items-center px-8 py-4 hover:bg-green-50 transition flex-1 min-w-[180px]">
+                            <span class="mb-2 text-3xl text-green-600">
+                                <i class="fas fa-car"></i>
+                            </span>
+                            <span class="font-semibold text-base">I'm a Driver</span>
+                            <span class="text-xs text-gray-500 mt-1">Accept ride requests</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="app-content" class="hidden">
+
+                    <div id="rider-section" class="hidden p-4 border rounded-lg bg-blue-50 mb-6">
+                        <h3 class="text-lg font-semibold mb-4 text-blue-800">Request a Ride</h3>
+                        <div class="mb-4">
+                            <label for="riderPhoneInput" class="block text-sm font-medium text-gray-700 mb-1">Your Phone Number</label>
+                            <input type="tel" id="riderPhoneInput" placeholder="e.g., 555-123-4567" class="input-field">
+                        </div>
+                        <hr class="my-4 border-gray-300">
+                        <div class="mb-4">
+                            <label for="currentLocationInput" class="block text-sm font-medium text-gray-700 mb-1">1. Current Location</label>
+                            <div class="flex gap-2">
+                                 <input type="text" id="currentLocationInput" placeholder="Enter your address" class="input-field flex-grow">
+                                <!--   <button id="getLocationBtn" class="btn btn-primary whitespace-nowrap !py-2 !px-3">Get Location</button> </div> -->
+                             <p id="location-error" class="text-red-600 text-sm mt-1"></p>
+                        </div>
+                        <div class="mb-4">
+                            <label for="destinationInput" class="block text-sm font-medium text-gray-700 mb-1">2. Destination</label>
+                            <input type="text" id="destinationInput" placeholder="Enter destination address" class="input-field">
+                        </div>
+                         <button id="sendRequestBtn" class="btn btn-primary w-full mb-4">3. Send Ride Request</button>
+
+                         <div id="request-status-area" class="hidden p-3 border rounded-md bg-white text-center">
+                            <p id="request-status-message" class="text-green-700 font-medium">Request sent successfully!</p>
+                            <p class="text-xs text-gray-500 mt-1">Waiting for a driver...</p>
+                            <div id="accepted-driver-info" class="hidden mt-3 text-sm text-left border-t pt-2">
+                                <p class="font-semibold">Your driver is on the way!</p>
+                                <p>Contact: <span id="accepted-driver-phone"></span></p>
+                            </div>
+                         </div>
+                    </div>
+
+                    <div id="driver-section-wrapper" class="hidden">
+                        <div id="driver-phone-prompt" class="p-4 border rounded-lg bg-teal-50 mb-6">
+                             <h3 class="text-lg font-semibold mb-3 text-teal-800">Enter Your Phone Number</h3>
+                             <p class="text-sm text-gray-600 mb-2">Please enter your number so riders can contact you if you accept their request.</p>
+                             <input type="tel" id="driverPhoneInput" placeholder="e.g., 555-987-6543" class="input-field mb-3">
+                             <button id="submitDriverPhoneBtn" class="btn btn-primary w-full">Start Receiving Requests</button>
+                        </div>
+
+                        <div id="driver-section" class="hidden p-4 border rounded-lg bg-teal-50 mb-6">
+                            <h3 class="text-lg font-semibold mb-3 text-teal-800">Incoming Ride Requests</h3>
+                            <div id="driver-accepted-ride-info" class="hidden p-3 border rounded-md bg-white text-left mb-4">
+                                <p class="font-semibold text-green-700">Ride Accepted!</p>
+                                <p class="text-sm"><strong>Contact Rider:</strong> <span id="accepted-rider-phone"></span></p>
+                                <p class="text-sm"><strong>From:</strong> <span id="accepted-origin"></span></p>
+                                <p class="text-sm"><strong>To:</strong> <span id="accepted-destination"></span></p>
+                                <a id="accepted-route-link" href="#" target="_blank" class="text-blue-600 hover:underline text-sm mt-1 block">View Route</a>
+                                <button id="clearAcceptedRideBtn" class="btn btn-secondary !py-1 !px-2 text-xs mt-2">Clear This Ride</button>
+                            </div>
+                            <div id="driver-requests-list" class="max-h-96 overflow-y-auto">
+                                <p id="no-requests-message" class="text-gray-600 italic">No pending requests...</p>
+                            </div>
+                        </div>
+                    </div> <div class="text-center mt-4">
+                        <button id="backBtn" class="text-sm text-gray-600 hover:text-gray-900 underline">Choose Role Again</button>
+                    </div>
+                </div> </div>
+        </section>
+
+        <section id="page-contact" class="page-section hidden">
+            <h2 class="text-3xl font-bold mb-6 text-center">Contact Us</h2>
+            <div class="bg-white p-8 rounded-lg shadow space-y-4 text-gray-700 text-center">
+                <p>We'd love to hear from you! Reach out to us for support, feedback, or partnership opportunities:</p>
+                <p>
+                    <strong>Email:</strong>
+                    <a href="mailto:contact@rydiko.com" class="text-blue-600 hover:underline font-medium">contact@rydiko.com</a>
+                </p>
+                <p>
+                    <strong>Phone:</strong>
+                    <a href="tel:+19726389825" class="text-blue-600 hover:underline font-medium">+1 972-638-9825</a>
+                </p>
+                <p>
+                    <strong>Website:</strong>
+                    <a href="https://rydiko.com" target="_blank" class="text-blue-600 hover:underline font-medium">rydiko.com</a>
+                </p>
+                <p>
+                    Our team is available 7 days a week to assist you with any questions or concerns.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300 mt-auto py-6 w-full">
+        <div class="container mx-auto max-w-4xl px-4 flex flex-col md:flex-row items-center justify-between">
+            <div class="text-center md:text-left text-sm mb-4 md:mb-0">
+                © <span id="current-year"></span> Rydiko. All Rights Reserved.
+            </div>
+            <div class="flex space-x-4 justify-center md:justify-end">
+                <a href="https://facebook.com/rydiko" target="_blank" aria-label="Facebook"
+                   class="social-footer-icon hover:bg-gray-700">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://instagram.com/rydiko" target="_blank" aria-label="Instagram"
+                   class="social-footer-icon hover:bg-gray-700">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://twitter.com/rydiko" target="_blank" aria-label="Twitter"
+                   class="social-footer-icon hover:bg-gray-700">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://linkedin.com/company/rydiko" target="_blank" aria-label="LinkedIn"
+                   class="social-footer-icon hover:bg-gray-700">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <style>
+        .social-footer-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 9999px;
+            background: #111827; /* Gray-900 */
+            color: #fff;
+            font-size: 1.25rem;
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+            box-shadow: 0 2px 8px 0 rgba(0,0,0,0.06);
+        }
+        .social-footer-icon:hover {
+            color: #fff;
+            background: #374151; /* Gray-700 */
+            box-shadow: 0 4px 16px 0 rgba(0,0,0,0.12);
+            opacity: 0.92;
+        }
+    </style>
+
+    <script type="module">
+        // Ensure Firebase config is loaded
+        if (!window.firebaseConfig || !window.firebaseConfig.apiKey || window.firebaseConfig.apiKey === "YOUR_API_KEY") {
+            console.error("Firebase config is missing or incomplete. Please paste your config in the HTML.");
+            alert("Firebase configuration is missing! Cannot initialize app.");
+            document.body.innerHTML = '<div class="p-10 text-center text-red-600 font-bold">Error: Firebase configuration missing. Cannot load application.</div>';
+        } else {
+            // --- Initialize Firebase ---
+            firebase.initializeApp(window.firebaseConfig);
+            const db = firebase.firestore(); // Initialize Firestore
+
+            // --- DOM Elements ---
+            const pageSections = document.querySelectorAll('.page-section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const roleSelectionSection = document.getElementById('role-selection-section');
+            const appContent = document.getElementById('app-content');
+            const riderSection = document.getElementById('rider-section');
+            const driverSectionWrapper = document.getElementById('driver-section-wrapper'); // New wrapper
+            const driverPhonePrompt = document.getElementById('driver-phone-prompt');
+            const driverSection = document.getElementById('driver-section'); // Actual request list area
+            const selectRiderBtn = document.getElementById('selectRiderBtn');
+            const selectDriverBtn = document.getElementById('selectDriverBtn');
+            const backBtn = document.getElementById('backBtn');
+
+            // Rider elements
+            const riderPhoneInput = document.getElementById('riderPhoneInput'); // New
+            const currentLocationInput = document.getElementById('currentLocationInput');
+            const getLocationBtn = document.getElementById('getLocationBtn');
+            const locationError = document.getElementById('location-error');
+            const destinationInput = document.getElementById('destinationInput');
+            const sendRequestBtn = document.getElementById('sendRequestBtn');
+            const requestStatusArea = document.getElementById('request-status-area');
+            const requestStatusMessage = document.getElementById('request-status-message');
+            const acceptedDriverInfo = document.getElementById('accepted-driver-info'); // New
+            const acceptedDriverPhone = document.getElementById('accepted-driver-phone'); // New
+
+            // Driver elements
+            const driverPhoneInput = document.getElementById('driverPhoneInput'); // New
+            const submitDriverPhoneBtn = document.getElementById('submitDriverPhoneBtn'); // New
+            const driverRequestsList = document.getElementById('driver-requests-list');
+            const noRequestsMessage = document.getElementById('no-requests-message');
+            const driverAcceptedRideInfo = document.getElementById('driver-accepted-ride-info'); // New
+            const acceptedRiderPhone = document.getElementById('accepted-rider-phone'); // New
+            const acceptedOrigin = document.getElementById('accepted-origin'); // New
+            const acceptedDestination = document.getElementById('accepted-destination'); // New
+            const acceptedRouteLink = document.getElementById('accepted-route-link'); // New
+            const clearAcceptedRideBtn = document.getElementById('clearAcceptedRideBtn'); // New
+
+            // --- Global State ---
+            let userRole = null; // 'rider' or 'driver'
+            let userLocation = null; // { lat: number, lng: number }
+            let unsubscribeRequests = null;
+            let currentPage = 'home';
+            let driverPhoneNumber = null; // Store driver's phone locally
+            let riderRequestId = null; // Store the ID of the request the rider sent
+            let unsubscribeSingleRequest = null; // Listener for rider's specific request
+
+            // --- Page Navigation ---
+            function showPage(pageId) {
+                 console.log("Showing page:", pageId);
+                 currentPage = pageId;
+                 pageSections.forEach(section => {
+                     section.id === `page-${pageId}` ? section.classList.remove('hidden') : section.classList.add('hidden');
+                 });
+                 navLinks.forEach(link => {
+                     link.dataset.page === pageId ? link.classList.add('active') : link.classList.remove('active');
+                 });
+
+                 if (pageId === 'request') {
+                     roleSelectionSection.classList.remove('hidden');
+                     appContent.classList.add('hidden');
+                     userRole = null;
+                     driverPhoneNumber = null; // Clear driver phone when navigating to request page
+                     riderRequestId = null; // Clear rider request ID
+                     stopSingleRequestListener(); // Stop listening for rider's specific request
+                     updateRequestUI();
+                 } else {
+                     stopRequestListener(); // Stop general driver listener if navigating away
+                     stopSingleRequestListener(); // Stop specific rider listener
+                 }
+                 window.scrollTo(0, 0);
+            }
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const pageId = e.target.dataset.page;
+                    if (pageId) showPage(pageId);
+                });
+            });
+
+            // --- Utility to stop Firestore listeners ---
+            function stopRequestListener() {
+                if (unsubscribeRequests) {
+                    unsubscribeRequests();
+                    unsubscribeRequests = null;
+                    console.log("Stopped listening for ride requests.");
+                }
+            }
+            function stopSingleRequestListener() {
+                 if (unsubscribeSingleRequest) {
+                    unsubscribeSingleRequest();
+                    unsubscribeSingleRequest = null;
+                    console.log("Stopped listening for single request update.");
+                }
+            }
+
+            // --- Ride Request UI Update Function ---
+            function updateRequestUI() {
+                requestStatusArea.classList.add('hidden');
+                acceptedDriverInfo.classList.add('hidden'); // Hide driver info for rider
+                driverAcceptedRideInfo.classList.add('hidden'); // Hide accepted ride info for driver
+
+                stopRequestListener(); // Stop general listener by default
+
+                if (userRole) {
+                    roleSelectionSection.classList.add('hidden');
+                    appContent.classList.remove('hidden');
+                    if (userRole === 'rider') {
+                        driverSectionWrapper.classList.add('hidden');
+                        riderSection.classList.remove('hidden');
+                        // If rider previously sent a request, start listening for its acceptance
+                        if (riderRequestId) {
+                             listenForSingleRequestUpdate(riderRequestId);
+                        }
+                    } else if (userRole === 'driver') {
+                        riderSection.classList.add('hidden');
+                        driverSectionWrapper.classList.remove('hidden');
+                        // Check if driver phone is already entered
+                        if (driverPhoneNumber) {
+                            driverPhonePrompt.classList.add('hidden');
+                            driverSection.classList.remove('hidden'); // Show request list area
+                            listenForRideRequests(); // Start listening
+                        } else {
+                            driverPhonePrompt.classList.remove('hidden'); // Show phone prompt
+                            driverSection.classList.add('hidden'); // Hide request list area
+                        }
+                    }
+                } else {
+                    appContent.classList.add('hidden');
+                    roleSelectionSection.classList.remove('hidden');
+                    currentLocationInput.value = '';
+                    destinationInput.value = '';
+                    riderPhoneInput.value = ''; // Clear rider phone
+                    locationError.textContent = '';
+                    userLocation = null;
+                    riderRequestId = null; // Clear request ID
+                    stopSingleRequestListener(); // Stop listening for rider's specific request
+                }
+            }
+
+            // --- Geolocation ---
+            function getCurrentLocation() {
+                // (Function remains the same as previous version)
+                 locationError.textContent = '';
+                currentLocationInput.value = 'Fetching...';
+                getLocationBtn.disabled = true;
+
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(
+                        (position) => {
+                            userLocation = {
+                                lat: position.coords.latitude,
+                                lng: position.coords.longitude
+                            };
+                            currentLocationInput.value = `Lat: ${userLocation.lat.toFixed(5)}, Lng: ${userLocation.lng.toFixed(5)}`;
+                            console.log("Location fetched:", userLocation);
+                            getLocationBtn.disabled = false;
+                        },
+                        (error) => {
+                            console.error("Geolocation error:", error);
+                            currentLocationInput.value = '';
+                            currentLocationInput.placeholder = "Enter address or click 'Get Location'";
+                            locationError.textContent = `Error: ${error.message}. Try entering manually.`;
+                            userLocation = null;
+                            getLocationBtn.disabled = false;
+                        },
+                        { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 }
+                    );
+                } else {
+                    console.error("Geolocation is not supported.");
+                    currentLocationInput.value = '';
+                    currentLocationInput.placeholder = "Enter address or click 'Get Location'";
+                    locationError.textContent = 'Geolocation not supported. Please enter manually.';
+                    userLocation = null;
+                    getLocationBtn.disabled = false;
+                }
+            }
+
+            // --- Handle Sending Ride Request (Writes to Firestore) ---
+            async function handleSendRequest() {
+                 // (Function logic updated to include rider phone)
+                const riderPhone = riderPhoneInput.value.trim(); // Get rider phone
+                const locationInputVal = currentLocationInput.value.trim();
+                const destination = destinationInput.value.trim();
+
+                if (!riderPhone) { // Validate phone
+                    alert("Please enter your phone number.");
+                    riderPhoneInput.focus();
+                    return;
+                }
+                 if (!locationInputVal) {
+                    alert("Please enter or get your current location (Step 1).");
+                    return;
+                }
+                if (!destination) {
+                    alert("Please enter a destination address (Step 2).");
+                    return;
+                }
+
+                const originForLink = userLocation
+                    ? `${userLocation.lat},${userLocation.lng}`
+                    : encodeURIComponent(locationInputVal);
+                const destinationStr = encodeURIComponent(destination);
+                const mapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${originForLink}&destination=${destinationStr}&travelmode=driving`;
+
+                let confirmationMessage = "Confirm Ride Request:\n\n";
+                confirmationMessage += `Phone: ${riderPhone}\n`; // Include phone in confirmation
+                confirmationMessage += `From: ${locationInputVal}\n`;
+                confirmationMessage += `To: ${destination}\n\n`;
+                confirmationMessage += "Pricing Rule: $1/mile, minimum $5 (distance estimated by Google Maps).\n\n";
+                confirmationMessage += "Proceed with request?";
+
+                if (confirm(confirmationMessage)) {
+                    console.log("Ride request confirmed by user. Sending to Firestore...");
+                    sendRequestBtn.disabled = true;
+                    requestStatusMessage.textContent = "Sending request...";
+                    requestStatusArea.classList.remove('hidden');
+                    acceptedDriverInfo.classList.add('hidden'); // Hide previous acceptance info
+
+                    try {
+                        const requestsCollection = db.collection('rideRequests');
+                        const docRef = await requestsCollection.add({ // Get the document reference
+                            riderPhone: riderPhone, // Save rider phone
+                            originText: locationInputVal,
+                            destinationText: destination,
+                            mapsUrl: mapsUrl,
+                            status: 'pending',
+                            createdAt: firebase.firestore.FieldValue.serverTimestamp()
+                        });
+
+                        riderRequestId = docRef.id; // Store the ID of the sent request
+                        console.log("Request successfully added to Firestore with ID:", riderRequestId);
+                        requestStatusMessage.textContent = "Request sent successfully!";
+                        listenForSingleRequestUpdate(riderRequestId); // Start listening for acceptance
+
+                         currentLocationInput.value = '';
+                         destinationInput.value = '';
+                         // Keep phone number for potential future requests? Or clear? Let's clear for now.
+                         // riderPhoneInput.value = '';
+                         userLocation = null;
+
+                    } catch (error) {
+                        console.error("Error adding request to Firestore: ", error);
+                        alert("Failed to send request. Please check console or try again.");
+                        requestStatusMessage.textContent = "Failed to send request.";
+                        riderRequestId = null; // Clear ID on failure
+                    } finally {
+                         sendRequestBtn.disabled = false;
+                    }
+
+                } else {
+                    console.log("Ride request cancelled by user.");
+                    requestStatusArea.classList.add('hidden');
+                }
+            }
+
+             // --- Listen for updates on the Rider's specific request ---
+            function listenForSingleRequestUpdate(reqId) {
+                if (!reqId) return;
+                stopSingleRequestListener(); // Stop previous listener if any
+                console.log("Listening for updates on request ID:", reqId);
+
+                unsubscribeSingleRequest = db.collection('rideRequests').doc(reqId)
+                    .onSnapshot((doc) => {
+                        if (doc.exists) {
+                            const requestData = doc.data();
+                            console.log("Received update for own request:", requestData);
+                            if (requestData.status === 'accepted' && requestData.driverPhone) {
+                                // Request was accepted! Show driver info to rider
+                                acceptedDriverPhone.textContent = requestData.driverPhone;
+                                acceptedDriverInfo.classList.remove('hidden');
+                                requestStatusMessage.textContent = "Ride Accepted!"; // Update status message
+                                // Stop listening once accepted? Optional.
+                                // stopSingleRequestListener();
+                            } else if (requestData.status === 'pending') {
+                                // Still pending, ensure acceptance info is hidden
+                                acceptedDriverInfo.classList.add('hidden');
+                                requestStatusMessage.textContent = "Request sent successfully!";
+                            }
+                            // Handle other statuses like 'cancelled' or 'completed' later if needed
+                        } else {
+                            // Document might have been deleted (e.g., if request cancelled/completed)
+                            console.log("Rider's request document not found (might be completed/deleted).");
+                            requestStatusMessage.textContent = "Request status unknown or completed.";
+                             acceptedDriverInfo.classList.add('hidden');
+                             stopSingleRequestListener();
+                        }
+                    }, (error) => {
+                        console.error("Error listening to single request:", error);
+                         requestStatusMessage.textContent = "Error getting request status.";
+                         acceptedDriverInfo.classList.add('hidden');
+                    });
+            }
+
+
+            // --- Listen for Ride Requests (For Driver View) ---
+            function listenForRideRequests() {
+                if (unsubscribeRequests) return; // Prevent multiple listeners
+                console.log("Starting listener for ride requests...");
+                const requestsQuery = db.collection('rideRequests')
+                                        .where('status', '==', 'pending')
+                                        .orderBy('createdAt', 'desc')
+                                        .limit(10);
+
+                unsubscribeRequests = requestsQuery.onSnapshot(snapshot => {
+                    console.log(`Received ${snapshot.docs.length} pending requests.`);
+                    driverRequestsList.innerHTML = ''; // Clear previous list
+                    if (snapshot.empty) {
+                        driverRequestsList.innerHTML = '<p id="no-requests-message" class="text-gray-600 italic">No pending requests...</p>';
+                    } else {
+                        snapshot.forEach(doc => {
+                            const request = doc.data();
+                            const requestId = doc.id; // Get the document ID
+                            const requestDiv = document.createElement('div');
+                            requestDiv.classList.add('ride-request-item');
+
+                            let timeString = 'Just now';
+                            if (request.createdAt?.toDate) {
+                                timeString = request.createdAt.toDate().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                            }
+
+                            // Add Accept button with data-id attribute
+                            requestDiv.innerHTML = `
+                                <p class="text-sm"><strong>From:</strong> ${request.originText}</p>
+                                <p class="text-sm"><strong>To:</strong> ${request.destinationText}</p>
+                                <p class="text-sm mt-1"><strong>Time:</strong> ${timeString}</p>
+                                <a href="${request.mapsUrl}" target="_blank" class="text-blue-600 hover:underline text-sm mt-1 block">View Route</a>
+                                <button class="btn btn-success !py-1 !px-3 text-sm mt-2 accept-btn" data-id="${requestId}">Accept Ride</button>
+                            `;
+                            driverRequestsList.appendChild(requestDiv);
+                        });
+                    }
+                }, error => {
+                    console.error("Error listening to ride requests: ", error);
+                    driverRequestsList.innerHTML = '<p class="text-red-500 italic">Error loading requests.</p>';
+                });
+            }
+
+            // --- Accept Ride Request ---
+            async function acceptRequest(requestId, requestData) {
+                 if (!driverPhoneNumber) {
+                    alert("Error: Driver phone number not set.");
+                    return;
+                 }
+                 console.log(`Attempting to accept request: ${requestId}`);
+                 const requestRef = db.collection('rideRequests').doc(requestId);
+
+                 try {
+                     await requestRef.update({
+                         status: 'accepted',
+                         driverPhone: driverPhoneNumber, // Add driver's phone
+                         acceptedAt: firebase.firestore.FieldValue.serverTimestamp()
+                     });
+                     console.log("Request accepted successfully in Firestore.");
+
+                     // Show accepted ride details to this driver
+                     acceptedRiderPhone.textContent = requestData.riderPhone || 'Not provided';
+                     acceptedOrigin.textContent = requestData.originText;
+                     acceptedDestination.textContent = requestData.destinationText;
+                     acceptedRouteLink.href = requestData.mapsUrl;
+                     driverAcceptedRideInfo.classList.remove('hidden');
+
+                     // Stop listening for general requests? Optional, maybe driver wants only one ride.
+                     // stopRequestListener();
+                     // driverRequestsList.innerHTML = '<p class="text-gray-600 italic">You have accepted a ride.</p>';
+
+
+                 } catch (error) {
+                     console.error("Error accepting request: ", error);
+                     alert("Failed to accept request. It might have been taken already. Please refresh.");
+                 }
+            }
+
+
+            // --- Event Listeners ---
+
+            // Role Selection on Request Page
+            selectRiderBtn.addEventListener('click', () => {
+                userRole = 'rider';
+                updateRequestUI();
+            });
+
+            selectDriverBtn.addEventListener('click', () => {
+                userRole = 'driver';
+                updateRequestUI(); // Will show phone prompt first if needed
+            });
+
+            // Submit Driver Phone
+            submitDriverPhoneBtn.addEventListener('click', () => {
+                const phone = driverPhoneInput.value.trim();
+                if (phone) {
+                    driverPhoneNumber = phone;
+                    console.log("Driver phone number set:", driverPhoneNumber);
+                    driverPhoneInput.value = ''; // Clear input
+                    updateRequestUI(); // Update UI to hide prompt and show requests
+                } else {
+                    alert("Please enter a valid phone number.");
+                }
+            });
+
+            // Back button within Request Page
+            backBtn.addEventListener('click', () => {
+                userRole = null;
+                driverPhoneNumber = null; // Clear driver phone on back
+                riderRequestId = null; // Clear rider request ID
+                stopSingleRequestListener();
+                updateRequestUI();
+            });
+
+            // Rider listeners
+            getLocationBtn.addEventListener('click', getCurrentLocation);
+            sendRequestBtn.addEventListener('click', handleSendRequest);
+
+            // Driver - Accept Button Listener (using Event Delegation)
+            driverRequestsList.addEventListener('click', async (e) => {
+                if (e.target.classList.contains('accept-btn')) {
+                    const button = e.target;
+                    const requestId = button.dataset.id;
+                    button.disabled = true; // Disable button immediately
+                    button.textContent = 'Accepting...';
+                    console.log("Accept button clicked for request ID:", requestId);
+
+                    // Fetch the latest request data before accepting
+                    try {
+                        const requestRef = db.collection('rideRequests').doc(requestId);
+                        const doc = await requestRef.get();
+                        if (doc.exists && doc.data().status === 'pending') {
+                             acceptRequest(requestId, doc.data());
+                        } else {
+                             alert("Request is no longer available or already accepted.");
+                             button.textContent = 'Unavailable';
+                             // Optionally remove the item from the list visually
+                             button.closest('.ride-request-item')?.remove();
+                        }
+                    } catch (error) {
+                        console.error("Error fetching request before accept:", error);
+                        alert("Error checking request status. Please try again.");
+                        button.disabled = false;
+                        button.textContent = 'Accept Ride';
+                    }
+                }
+            });
+
+             // Driver - Clear Accepted Ride Info
+            clearAcceptedRideBtn.addEventListener('click', () => {
+                driverAcceptedRideInfo.classList.add('hidden');
+                // Optionally restart listening for requests if it was stopped
+                // if (!unsubscribeRequests) {
+                //    listenForRideRequests();
+                // }
+            });
+
+
+            // --- Initial Setup ---
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+            showPage('home'); // Show home page initially
+
+        } // End Firebase config check else block
+    </script>
+
+    <script>
+    // Responsive mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mainNav = document.getElementById('main-nav');
+    if (mobileMenuBtn && mainNav) {
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('hidden');
+        });
+        // Optional: Hide menu on link click (mobile)
+        mainNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 768) mainNav.classList.add('hidden');
+            });
+        });
+    }
+    </script>
+</body>
 </html>
